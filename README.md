@@ -13,7 +13,17 @@ A mini-application built with **Django** that scores and prioritizes tasks using
 
 ## ⚡ Quick Start (Local Setup)
 
-### 1. Create & Activate Virtual Environment
+## Setup Instructions
+
+Follow these steps to run the Smart Task Analyzer locally:
+
+### Clone the Repository
+```powershell
+git clone https://github.com/<your-username>/task-analyzer.git
+cd task-analyzer
+
+
+### 1. Create and Activate Virtual Environment
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
