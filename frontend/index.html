@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Task Analyzer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Smart Task Analyzer</h1>
+      <p class="subtitle">Paste a JSON array of tasks, click Analyze — backend scores & ranks them.</p>
+    </header>
+
+    <main class="split">
+      <section class="left">
+        <h2>Input (JSON array)</h2>
+        <textarea id="taskInput" rows="12" placeholder='Paste JSON array here. Example: [{"title":"A","due_date":"2025-12-01","estimated_hours":2,"importance":8,"dependencies":[]}]'></textarea>
+
+        <div class="controls">
+          <label for="strategy">Strategy</label>
+          <select id="strategy">
+            <option value="smart">Smart (default)</option>
+            <option value="deadline">Deadline-driven</option>
+            <option value="fastest">Fastest-first</option>
+            <option value="importance">Importance-first</option>
+          </select>
+
+          <button id="analyzeBtn">Analyze</button>
+          <button id="suggestBtn">Suggest Top 3</button>
+          <button id="sampleBtn">Load Sample</button>
+        </div>
+
+        <div id="error" class="error" role="alert" aria-live="polite"></div>
+      </section>
+
+      <section class="right">
+        <h2>Results</h2>
+        <div id="results" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Backend: <code>/api/tasks/analyze/</code> & <code>/api/tasks/suggest/</code></small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
