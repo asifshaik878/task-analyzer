@@ -19,7 +19,7 @@ Follow these steps to run the Smart Task Analyzer locally:
 
 ### Clone the Repository
 ```powershell
-git clone https://github.com/<your-username>/task-analyzer.git
+git clone https://github.com/asifshaik878/task-analyzer.git
 cd task-analyzer
 
 
